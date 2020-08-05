@@ -1,0 +1,72 @@
+.app{
+    max-width: 700px;
+    min-height: 50px;
+    margin: auto;
+    transform: translateY(3rem);
+    background: rgba(3, 3, 3, 0.103);
+    padding:4.5rem;
+    border-radius:15px;
+}
+.wrapper{
+    box-shadow: 0pt 0pt 3pt 0pt rgba(0, 0, 0, 0.150);
+    border-radius:10px;
+    padding:2rem;
+    margin:1rem
+}
+.bio{
+    text-align: center;
+    
+}
+.skills{ 
+    background:white;
+    color:black;
+    border-radius: 8px;
+    padding:0.5rem 1rem;
+    margin: 1rem;
+    text-decoration: none;
+    transition: all 0.5s;
+
+}
+.social{
+    background:white;
+    color:black;
+    border-radius: 8px;
+    padding:0.5rem 1rem;
+    margin: 1rem;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.social:hover{
+    background:rgb(218, 218, 218);
+    color:rgb(31, 22, 22);
+}
+.fields{
+    border:none;
+    outline: none;
+    padding: 0.5rem;
+    box-shadow: 0pt 0pt 3pt 0pt rgba(0, 0, 0, 0.205);
+    border-radius: 0.25rem;
+    margin:0rem 0.5rem;
+}
+.fields:focus{
+    outline: none;
+    border:1px solid black
+}
+.btn{
+    border: none;
+    padding:0.5rem 0.75rem;
+    box-shadow: 0pt 0pt 3pt 0pt rgba(0, 0, 0, 0.205);
+    color:rgb(255, 255, 255);
+    background: rgb(7, 32, 253);
+    margin:0rem 0.5rem;
+    padding:0.5rem 1rem;
+    border-radius: 6px;
+}
+.btn:focus{
+    border:none;
+    outline: none;
+    background: rgb(4, 2, 138);
+}
+.text-center{
+    text-align: center;
+}

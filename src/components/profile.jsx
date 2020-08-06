@@ -17,7 +17,6 @@ class Profile extends Component{
                     <Social url={this.props.urlB} social={this.props.socialB}/>
                     <Social url={this.props.urlC} social={this.props.socialC}/>
                 </div>
-
             </div>  
         )
     }

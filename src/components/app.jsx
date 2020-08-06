@@ -1,17 +1,32 @@
 import React,{Component} from 'react'
-import Profile from './profile'
+// import Profile from './profile'
 class App extends Component{
-    
+    state = {
+        count:0
+    }
+    discreaseHandler(){
+            let stoped = setInterval(()=>{
+                this.setState({count:this.state.count-1})
+                 
+                if(this.state.count===0){
+                    
+                    clearInterval(stoped,0)
+                    
+                }
+                if(this.state.count<=0)alert('Closed!')
+                    
+            },1000)
+            
+    }
     render(){
         return (
-            <div className="app">
-                <h1 class="text-center">Profile</h1>
-                <Profile name="Muhammad Minhaj" title="Full Stack JS Developer And Student" skillA="Javascript" skillB="NodeJS" skillC="Bootstrap" urlA="https://facebook.com" urlB="https://youtube.com" urlC="https://github.com" socialA="Facebook" socialB="Youtube" socialC="Github"/>
+           <div className="app" style={{textAlign:'center'}}>
+               <h1>{this.state.count}</h1>
+               <button className="btn" onClick={()=>this.setState({count:this.state.count+1})}>Increase</button>
+               <button className='btn' onClick={()=>this.discreaseHandler()}>Discrease</button>
+               <button className="btn" onClick={()=>this.setState({count:0})} >Reset</button>
 
-                <Profile name="Muhammad Minar Islam" title="Full Stack JS Developer And Student" skillA="Javascript" skillB="NodeJS" skillC="Bootstrap" urlA="https://facebook.com" urlB="https://youtube.com" urlC="https://github.com" socialA="Facebook" socialB="Youtube" socialC="Github"/>
-
-                <Profile name="Muhammad Mokhtar" title="Full Stack JS Developer And Student" skillA="Javascript" skillB="NodeJS" skillC="Bootstrap" urlA="https://facebook.com" urlB="https://youtube.com" urlC="https://github.com" socialA="Facebook" socialB="Youtube" socialC="Github"/>
-            </div>
+           </div>
         )
     }
      

@@ -1,35 +1,46 @@
-import React,{Component} from 'react'
+import React, { Component } from 'react'
 
-class App extends Component{
-    state = {
-        count:0
-    }
-    discreaseHandler(){
-            let stoped = setInterval(()=>{
-                this.setState({count:this.state.count-1})
-                 
-                if(this.state.count===0){
-                    
-                    clearInterval(stoped,0)
-                    
-                }
-                if(this.state.count<=0)alert('Closed!')
-                    
-            },1000)
-            
-    }
-    render(){
-        return (
-           <div className="app" style={{textAlign:'center'}}>
-               <h1>{this.state.count}</h1>
-               <button className="btn" onClick={()=>this.setState({count:this.state.count+1})}>Increase</button>
-               <button className='btn' onClick={()=>this.discreaseHandler()}>Discrease</button>
-               <button className="btn" onClick={()=>this.setState({count:0})} >Reset</button>
-
-           </div>
-        )
-    }
-     
+class App extends Component {
+	state = {
+		count:0
+	}
+	counterId = null
+	increementHandler = ()=>{
+		this.setState({count:this.state.count+1})
+	}
+	decreementHandler = ()=>{
+		if(this.state.count>0)this.setState({count:this.state.count-1})
+	}
+	startHandler = ()=>{
+		this.counterId = setInterval(()=>{
+			this.setState({count:this.state.count+1})
+		},1000)
+		
+	}
+	stopHandler = ()=>{
+		if(this.counterId){
+			clearInterval(this.counterId) 
+			if(this.counterId)this.counterId = null 
+		}
+	}
+	resetHandler = ()=>{
+		this.setState({count:0})
+		if(this.counterId)clearInterval(this.counterId) 
+	}
+	render() {
+		return (
+			<div className="app text-center">
+				<div className="mb">
+					<button className="btn-a" onClick={this.decreementHandler}>-</button>
+					<span>{this.state.count}</span>
+					<button className="btn-a" onClick={this.increementHandler}>+</button>
+				</div>
+				<button className="btn" onClick={this.startHandler}>Start</button>
+				<button className="btn" onClick={this.stopHandler}>Stop</button>
+				<button className="btn" onClick={this.resetHandler}>Reset</button>
+			</div>
+		)
+	}
 }
 
 export default App

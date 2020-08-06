@@ -17,6 +17,9 @@
     text-align: center;
     
 }
+.mb{
+    margin-bottom: 1rem;
+}
 .skills{ 
     background:white;
     color:black;
@@ -62,6 +65,19 @@
     padding:0.5rem 1rem;
     border-radius: 6px;
 }
+.btn-a{
+    border: none;
+    padding:0.5rem 0.75rem;
+    box-shadow: 0pt 0pt 3pt 0pt rgba(0, 0, 0, 0.205);
+    color:black;
+    border:1px solid black;
+    background: white;
+    margin:0rem 0.5rem;
+    padding:0rem 0.5rem;
+    border-radius: 6px;
+    font-size: 1.5rem;
+}
+
 .btn:focus{
     border:none;
     outline: none;

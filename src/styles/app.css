@@ -1,87 +1,75 @@
 .app{
-    max-width: 700px;
-    min-height: 50px;
+    max-width: 900px;
     margin: auto;
-    transform: translateY(3rem);
-    background: rgba(3, 3, 3, 0.103);
-    padding:4.5rem;
-    border-radius:15px;
 }
-.wrapper{
-    box-shadow: 0pt 0pt 3pt 0pt rgba(0, 0, 0, 0.150);
-    border-radius:10px;
-    padding:2rem;
-    margin:1rem
-}
-.bio{
-    text-align: center;
-    
-}
-.mb{
-    margin-bottom: 1rem;
-}
-.skills{ 
-    background:white;
-    color:black;
-    border-radius: 8px;
-    padding:0.5rem 1rem;
-    margin: 1rem;
-    text-decoration: none;
-    transition: all 0.5s;
 
+.form-container{
+    max-width: 600px;
+    height: auto;
+    padding: 2rem 5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    border-radius:10px;
+    box-shadow: 0pt 0pt 3pt 0pt #0000003d;
+    margin: auto;
+    transform: translateY(0.75rem);
+    background: #0051d60a;
 }
-.social{
-    background:white;
+.form-wrapper{
+    margin: 1.5rem 0rem;
+}
+
+.btn{
     color:black;
-    border-radius: 8px;
-    padding:0.5rem 1rem;
-    margin: 1rem;
-    text-decoration: none;
-    transition: all 0.5s;
+    border:1px solid black;
+    border-radius: 6px;
+    outline: none;
+    padding: 0.5rem 1.5rem;
+    transition:all 0.5s;
 }
-.social:hover{
-    background:rgb(218, 218, 218);
-    color:rgb(31, 22, 22);
+.btn:hover{
+    background:rgba(0, 0, 0, 0.300) ;
+    transform: scale(0.95);
+    outline: none;
 }
+
 .fields{
     border:none;
-    outline: none;
-    padding: 0.5rem;
-    box-shadow: 0pt 0pt 3pt 0pt rgba(0, 0, 0, 0.205);
-    border-radius: 0.25rem;
-    margin:0rem 0.5rem;
+    padding: 1rem 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0pt 0pt 2pt 0pt rgba(0, 0, 0, 0.225);
+    width: 100%;
+    margin-top: 0.75rem;
 }
 .fields:focus{
     outline: none;
-    border:1px solid black
+    border:1px solid rgba(0, 0, 0, 0.555)
 }
-.btn{
-    border: none;
-    padding:0.5rem 0.75rem;
-    box-shadow: 0pt 0pt 3pt 0pt rgba(0, 0, 0, 0.205);
-    color:rgb(255, 255, 255);
-    background: rgb(7, 32, 253);
-    margin:0rem 0.5rem;
-    padding:0.5rem 1rem;
-    border-radius: 6px;
+.invalid-text{
+    color: rgb(255, 13, 13);
+    font-size: 12px;
 }
-.btn-a{
-    border: none;
-    padding:0.5rem 0.75rem;
-    box-shadow: 0pt 0pt 3pt 0pt rgba(0, 0, 0, 0.205);
-    color:black;
-    border:1px solid black;
-    background: white;
-    margin:0rem 0.5rem;
-    padding:0rem 0.5rem;
-    border-radius: 6px;
-    font-size: 1.5rem;
+.success-text{
+    color: limegreen;
 }
-
-.btn:focus{
-    border:none;
-    outline: none;
-    background: rgb(4, 2, 138);
+.info-text{
+    color: mediumturquoise;
+}
+.alert-text{
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+.alert-container{
+    padding: 1.75rem;
+    margin: auto;
+    border-radius: 10px;
+}
+.is-invalid{
+    color: rgb(180, 25, 25);
+}
+.is-success{
+    color: rgb(20, 180, 15);
 }
 .text-center{
     text-align: center;

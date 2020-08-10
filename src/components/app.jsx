@@ -1,46 +1,32 @@
-import React, { Component } from 'react'
-
+import React,{Component} from 'react'
+import SingupForm from './index'
 class App extends Component {
 	state = {
-		count:0
+		users:[]
 	}
-	counterId = null
-	increementHandler = ()=>{
-		this.setState({count:this.state.count+1})
+	liftingstate = (user)=>{
+		user.id = new Date().toString()
+		this.setState({
+			users:[
+				...this.state.users,
+				user 
+			]
+		})
+		console.log(user)
+		console.log(this.state)
 	}
-	decreementHandler = ()=>{
-		if(this.state.count>0)this.setState({count:this.state.count-1})
-	}
-	startHandler = ()=>{
-		this.counterId = setInterval(()=>{
-			this.setState({count:this.state.count+1})
-		},1000)
-		
-	}
-	stopHandler = ()=>{
-		if(this.counterId){
-			clearInterval(this.counterId) 
-			if(this.counterId)this.counterId = null 
-		}
-	}
-	resetHandler = ()=>{
-		this.setState({count:0})
-		if(this.counterId)clearInterval(this.counterId) 
-	}
-	render() {
+	render(){
 		return (
-			<div className="app text-center">
-				<div className="mb">
-					<button className="btn-a" onClick={this.decreementHandler}>-</button>
-					<span>{this.state.count}</span>
-					<button className="btn-a" onClick={this.increementHandler}>+</button>
-				</div>
-				<button className="btn" onClick={this.startHandler}>Start</button>
-				<button className="btn" onClick={this.stopHandler}>Stop</button>
-				<button className="btn" onClick={this.resetHandler}>Reset</button>
+			<div className="app">
+				<SingupForm liftingstate={this.liftingstate} />
+				<h3 className="text-center">All Registered Users: </h3>
+				<ul>
+					{this.state.users.map(user=> (<li key={user.id}>{user.name}</li>) )}
+				</ul>
+
 			</div>
 		)
 	}
 }
 
-export default App
+export default App 
